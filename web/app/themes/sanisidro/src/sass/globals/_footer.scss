@@ -1,0 +1,25 @@
+footer {
+  padding: 50px 20px;
+  font-size: 14px;
+  color: $black;
+  background-color: $lightgray;
+  @include media-max-width(mobile) {
+    font-size: 16px;
+    padding: 60px 20px;
+  }
+  @include media-min-width(tablet) {
+    font-size: 20px;
+    padding: 60px 40px;
+  }
+  p {
+    @include media-max-width(mobile) {
+      width: 100%;
+      display: block;
+      text-align: center;
+    }
+    @include media-min-width(mobile) {
+      display: inline-block;
+    }
+    line-height: 1;
+  }
+}

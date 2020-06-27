@@ -1,0 +1,24 @@
+{% extends "base.twig" %}
+
+{% block content %}
+  {% if post %}
+    <section >
+      <div class="hero">
+        {% set hero_image = post.get_field('project_image') %}
+        <img class="hero__image" src="{{ hero_image.sizes.medium_large }}" alt="{{ post.title }}" />
+      </div>
+      <div class="pagination">
+        <a class="pagination__links" href="/projects">View all </a>
+        <a class="pagination__links" href="{{ post._next.link }}">Previous </a>
+        <a class="pagination__links" href="{{ post._prev.link }}" >Next </a>
+      </div>
+    </section>
+    <section>
+      <h2 class="title"> {{post.title}}</h2>
+      <p class="copy">{{post.meta('project_description')}}</p>
+    </section>
+  {% endif %}
+{% endblock %}
+
+
+

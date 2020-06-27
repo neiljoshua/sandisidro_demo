@@ -1,0 +1,21 @@
+{% extends "base.twig" %}
+
+{% block content %}
+  <section>
+    {% if post %}
+      {% for item in news %}
+        <article class="news-block">
+          {% set image = item.get_field('image_news_blog') %}
+           <img class="lazy news-block__image" src="{{ image.sizes.thumbnail }}" data-src="{{ image.sizes.medium_large }}" data-srcset="{{ image.sizes.medium_large }}"  alt="{{ item.post_name }}" />
+          <a class="news-block__link" href="{{ post.link }}{{item.slug}}">
+            <div class="news-copy" >
+              <p class="news-copy__caption">{{ item.post_name }}</p>
+              <p class="news-copy__line"></p>
+            </div>
+          </a>
+        </article>
+      {% endfor %}
+    {% endif %}
+  </section>
+
+{% endblock %}

@@ -1,0 +1,30 @@
+# Application
+web/app/plugins/*
+!web/app/plugins/.gitkeep
+web/app/mu-plugins/*/
+web/app/upgrade
+web/app/uploads/*
+!web/app/uploads/.gitkeep
+
+# WordPress
+web/wp
+web/.htaccess
+
+# Dotenv
+.env
+.env.*
+!.env.example
+
+# Composer
+/vendor
+
+# WP-CLI
+wp-cli.local.yml
+
+#Sass
+.sass-cache/
+
+.DS_Store
+
+web/app/themes/sanisidro/node_modules/
+web/app/themes/sanisidro/vendor/
